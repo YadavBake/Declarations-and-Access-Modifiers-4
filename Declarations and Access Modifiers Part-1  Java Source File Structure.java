@@ -1,6 +1,6 @@
 
-														Declarations and Access Modifiers Part-1 || Java Source File Structure
-													============================================================================
+											Declarations and Access Modifiers Part-1 || Java Source File Structure
+										    ============================================================================
 
 ------------------------------------
  Declarations and Access Modifiers	
@@ -24,8 +24,8 @@
  
 	class A {		 
 		
-	}					A.java
-	class B {			B.java	
+	}		    A.java
+	class B {	    B.java	
 	                    C.java
 	}                   Druga.java
 	class C {
@@ -38,7 +38,7 @@
 	class A {
 		
 	}			
-    public class B { 		
+public class B { 		
 									
     }         
     class C {
@@ -60,40 +60,38 @@
 		
 	
 	Ex. 2 
-													|														
-	class A {										|															javac Durga.java
-													|												--------------------------------------------
-		public static void main(String args[]){		|												|			 |				|		      |	
-													|											A.class 	   B.class      C.class	        D.class 
-			System.out.println("A class main");		|										
-		}											|											java A 	   	  java B 	  	 java C   		java D 
-	}												|						            	A class Main   	B class Main  	C class Main 	RE:NoSuchMethodError:main 
-													|										
-	                                                |																						java Durga 		
-	class B {                                       |																						RE: NoClassDefFoundError:Durga
-		                                            |
-		public static void main(String args[]){     |==>// Save as Durga.java 
+								|														
+	class A {						|									javac Durga.java
+								|							--------------------------------------------
+		public static void main(String args[]){		|							|	      |		   |	           |	
+								|						      A.class 	   B.class      C.class	        D.class 
+			System.out.println("A class main");	|										
+		}						|						       java A 	   java B 	  java C   	java D 
+	}							|					     	    A class Main   B class Main   C class Main 	RE:NoSuchMethodError:main 
+								|										                java Durga 		
+	class B {                                               |												RE: NoClassDefFoundError:Durga
+		                                                |
+		public static void main(String args[]){         | ==>// Save as Durga.java 
 			                                        |
 			System.out.println("B class main");     |	Conclusion:
-		}                                           |   
-	}												|   1. Whenever we are compiling a java program For every class prasent in that program a separate .class file will
-	                                                |      Generated.	 
-	                                                |    
-	class C {                                       |   2. We can compile a java program (java source file) but we can run a java .class file.
-    	                                            |   
-    	public static void main(String args[]){     |	3. Whenever we are executing a java class the curruspoding class main method will be executed.
-    		                                        |   
-    		System.out.println("C class main");     |	4. If the class doesn't containe main method then we will get runtime exception saying NoSuchMethodError:main
-    	}											|   
-    }                                               |	5. If the curruspoding .class file not available then we will get runtime exception saying NoClassDefFoundError.
-	                                                |   
-	class D {                                       |	 6. It is not recommanded to declare multiple classes in a single source file, It is highly recommanded to declare
-		                                            |       to declare only one class per source file and name of the program we have keep same as class name. The main 
-	}                                               |	    advantage of these approach is readability and maintainebility of the code will be improved.
-                                                    |
-                                                    |  
-													|	
-													|	
+		}                                               |   
+	}							|   1. Whenever we are compiling a java program For every class prasent in that program a separate .class file will
+	                                                        |      Generated.	 
+	                                                        |    
+	class C {                                               |   2. We can compile a java program (java source file) but we can run a java .class file.
+    	                                                        |   
+    	public static void main(String args[]){                 |   3. Whenever we are executing a java class the curruspoding class main method will be executed.
+    		                                                |   
+    		System.out.println("C class main");             |   4. If the class doesn't containe main method then we will get runtime exception saying NoSuchMethodError:main
+    	}							|   
+    }                                                           |   5. If the curruspoding .class file not available then we will get runtime exception saying NoClassDefFoundError.
+	                                                        |   
+	class D {                                               |   6. It is not recommanded to declare multiple classes in a single source file, It is highly recommanded to declare
+		                                                |      to declare only one class per source file and name of the program we have keep same as class name. The main 
+	}                                                       |      advantage of these approach is readability and maintainebility of the code will be improved.
+                                                                |
+                                                                |	
+									
 -------------------
  import Statement 
 ------------------- 
