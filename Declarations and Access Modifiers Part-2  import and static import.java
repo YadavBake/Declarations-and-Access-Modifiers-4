@@ -1,6 +1,6 @@
 
-													Declarations and Access Modifiers Part-2 || import and static import
-												==========================================================================
+											Declarations and Access Modifiers Part-2 || import and static import
+										      =========================================================================
 
 ----------------------------------------
   Case 1 : Types of import statements 	
@@ -120,8 +120,8 @@
 
 		java 
 	  	  |---util
-	  			|---regex
-	  	 			  |----Pattern 
+	  	       |---regex
+	  	 	     |----Pattern 
 								
 		- To use pattern class in our program which import statements is required >
 		
@@ -132,10 +132,10 @@
 			
 		Ex. 
 			
-		java.lang.reflect.*;							java 	
+		java.lang.reflect.*;			    java 	
 	                                                      |---lang
-	                                                    		|---reflect
-                                                         			  |----Method 
+	                                                            |---reflect
+                                                         		  |----Method 
 -----------
   Case 7: 
 -----------
