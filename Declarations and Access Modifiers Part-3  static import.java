@@ -1,25 +1,24 @@
 
-															Declarations and Access Modifiers Part-3 || static import
-														================================================================
+												Declarations and Access Modifiers Part-3 || static import
+											    ================================================================
 
 
 -> Explane about System.out.println() ?  
 
 	Ex. 
 	
-		class Test {														    	class System {
-			                                                                    		
-			static String s = "java";                                           		static PrintStream out ;
+		class Test {								class System {
+			static String s = "java";                                           	static PrintStream out ;
 			                                                                    		
 		}                                                                       	}
 		                                                                        	
-		Test	. 	s 	.  				length();                               	System . 	 out . 					println();
-		  |			|						|			                        	  |			  |							|
-	Test is a 	   s is a 				length() is a method                    System is a	   out is a 	          println() is a method 
-   class name     static variable 		prasent in string                       class prasent  static variable		  prasent in PrintStream 
-				 in Test class of 		class                                   in java.lang   prasent in System	  class .
-				the type java.lang.                                             package        class of the type 	
-				String                                                          			   PrintStream 
+		Test	. 	s 	.  	length();                               	System . 	 out . 			println();
+		  |		|		   |			                         |		  |			   |
+	Test is a 	   s is a 		length() is a method                       System is a	      out is a 	          println() is a method 
+        class name     static variable 		prasent in string                         class prasent     static variable	  prasent in PrintStream 
+			in Test class of 		class                             in java.lang      prasent in System	  class .
+			the type java.lang.                                               package           class of the type 	
+			String                                                          		   PrintStream 
 				
 	- 'out' is a static variable prasent in System class hance a we can access by using class name 'System' But Whenever we are writing static import it is not required to use 
 	   class name and we can access 'out' directly.
@@ -46,8 +45,8 @@
 		3. Implicit static import.
 		
 		Ex. 
-																			import static java.lang.Integer.MAX_VALUE; ---->//Line-2 
-		import static java.lang.Integer.*;						            import static java.lang.Byte.*;
+										import static java.lang.Integer.MAX_VALUE; ---->//Line-2 
+		import static java.lang.Integer.*; 		                import static java.lang.Byte.*;
 		import static java.lang.Byte.*;                                     
 		                                                                    public class Test {
 		public class Test {                                                 	static int MAX_VALUE = 999; -----//Line- 1 
@@ -56,8 +55,8 @@
 				                                                            		System.out.println(MAX_VALUE);
 				System.out.println(MAX_VALUE);                              	}
 			}                                                               } // output:999 
-		} //CE: reference to MAX_VALUE is ambiguous.							 output:2147483647
-																			//   output: 127	
+		} //CE: reference to MAX_VALUE is ambiguous.				   output:2147483647
+											//   output: 127	
 	 
 	 - If we comment line - 1 then explicit static import will be considard and hance a Interger class MAX_VALUE will considard in these case the output is 2147483647.
 	 
@@ -67,7 +66,7 @@
  
 	Normal Import 
    ----------------	
-																	2. Implicit import
+									2. Implicit import
 	1. Explicit import                                              
 	                                                                	Syntax:
 		Syntax:                                                     	
@@ -81,7 +80,7 @@
 	
      static  Import 
 	----------------	
-																	2. Implicit static  import
+									2. Implicit static  import
 	1. Explicit static import                                              
 	                                                                	Syntax:
 		Syntax:                                                     	
