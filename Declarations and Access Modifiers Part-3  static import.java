@@ -1,6 +1,6 @@
 
-												Declarations and Access Modifiers Part-3 || static import
-											    ================================================================
+											Declarations and Access Modifiers Part-3 || static import
+										    ================================================================
 
 
 -> Explane about System.out.println() ?  
