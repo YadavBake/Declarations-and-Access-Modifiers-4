@@ -1,6 +1,6 @@
 
-														Declarations and Access Modifiers Part-7|| MemberLevel Modifiers
-													=======================================================================
+											Declarations and Access Modifiers Part-7|| MemberLevel Modifiers
+										     =======================================================================
 
 ----------------------------------------------------
    strictfp [strict floating point] Modifier(1.2v)	
@@ -41,21 +41,21 @@
 	
 	
 	abstract strictfp class Test {
-	  |	        ---------------
+	  |	     |--------------
 	  | 	-----------       |
 	  | 	|m1() {}  |       |
 	  | 	|m2() {}  |       |
 	  | 	|m3() {}  |<------|
 	  | 	|.        |
-	  |		|..       | // strictfp talks about concrete methods
+	  |	|..       | // strictfp talks about concrete methods
 	  | 	|m100(){} |
 	  |	    -----------
 	   |	
-		|	-------
-		|	|mx();|
+		|   -------
+		|   |mx();|
 		--->|my();| // abstract talks aobut abstract methods 
-			|mz();|
-			-------
+		    |mz();|
+		    -------
 			
 		}   
 			
@@ -81,7 +81,7 @@
 			
 			Ex. 
 			
-			package pack1;														package pack2;
+			package pack1;							    package pack2;
 			class A {                                                           import pack1.A;
 				                                                                class B {
 				public void m1(){                                               	
@@ -93,7 +93,7 @@
 			java -d . A.java                                                    }
 			                                                                    
 			                                                                    java -d . B.java 
-																			//CE: pack1.A is not public in pack1; cannot be accessed from outside package. 
+											//CE: pack1.A is not public in pack1; cannot be accessed from outside package. 
 																					
 			- In the above example even though m1() method is public we can't access from outside package because corrusponding class A is not public that is if both class and 
 			   method are public then only we can access the method from outside package.
@@ -145,7 +145,7 @@
 
 
 
-			package pack1;																		package pack2;
+			package pack1;									    package pack2;
 			public class A {                                                                    import pack1.A;
 				                                                                                class C extends A {
 				protected void m1(){                                                            	
@@ -174,7 +174,7 @@
 		access we should use D class reference only.
 
 		
-		package pack1;															package pack2;											
+		package pack1;								package pack2;											
 		public class A {                                                        import pack1.A;
 			                                                                    class C extends A {
 			protected void m1(){                                                		
@@ -210,24 +210,24 @@
 	
 	
 		----------------------------------------------------------------------------------------------------
-		|	visibility								|private 		|default 	|	protected 		|public  | 
-		|	                                        |               |           |                   |        |
-		| 1. within the same class 					|   Yes			|  Yes 		|		Yes 		|  Yes 	 |		
-		|                                           |               |           |                   |        |
-		|                                           |               |           |                   |        |
-		| 2. frome child class   					|	NO 			|  Yes		|	    Yes			|  Yes   |
-		|	 same package                           |               |           |                   |        |
-		|                                           |               |           |                   |        |
-		| 3. From non-child class of same package   |   NO	 		|  Yes	    |		Yes		    |  Yes   |	   
-		|                                           |               |           |                   |        |
-		|                                           |               |           |                   |        |
-		| 4. From child class of outsie package 	|	NO	 		|	NO 	    |		Yes			|  Yes   |	
-		|											|				|			|  [we should use 	|        |
-		|											|				|			|	child reference |        |
-		|											|				|			|	only ]          |        |
-		|											|				|			|	                |        |
-		| 5. From non-child class of outside 		|   NO	 		|	NO	    |		No 			|  Yes   |
-		|	package.                                |               |           |                   |        |
+		|	visibility			   |private 	   |default    | protected 	   |public  | 
+		|	                                   |               |           |                   |        |
+		| 1. within the same class 		   |   Yes	   |  Yes      |	Yes 	   |  Yes   |		
+		|                                          |               |           |                   |        |
+		|                                          |               |           |                   |        |
+		| 2. frome child class   		   |	NO 	   |  Yes      |        Yes	   |  Yes   |
+		|	 same package                      |               |           |                   |        |
+		|                                          |               |           |                   |        |
+		| 3. From non-child class of same package  |   NO	   |  Yes      |	Yes	   |  Yes   |	   
+		|                                          |               |           |                   |        |
+		|                                          |               |           |                   |        |
+		| 4. From child class of outsie package    |	NO	   |	NO     |	Yes	   |  Yes   |	
+		|					   |		   |	       |  [we should use   |        |
+		|					   |		   |	       |  child reference  |        |
+		|					   |		   |	       |	only ]     |        |
+		|					   |		   |	       |	           |        |
+		| 5. From non-child class of outside 	   |   NO	   |	NO     |	No 	   |  Yes   |
+		|	package.                           |               |           |                   |        |
 		-----------------------------------------------------------------------------------------------------
 		
 		
