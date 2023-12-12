@@ -1,6 +1,6 @@
 
-														Declarations and Access Modifiers Part-9|| static modifier
-													================================================================
+												Declarations and Access Modifiers Part-9|| static modifier
+											     ================================================================
 
  static modifier
 =================
@@ -15,17 +15,17 @@
 		Ex. 
 		
 		class Test {
-																				 --------------
-			static int x =10;											----->  | x =10, 888  |<-----------------------------
-			int y =20;													|		---------------								|
-																		|													|
-			public static void main(String args[]){						|													|	
-																		|													|
-				Test t1 = new Test();									|-------|											|	
-				t1.x=888;													   --------------								|
-				t1.y=999;												t1---->| y = 20, 999|						   	  ---------
-				Test t2 = new Test();										   --------------						t2--> | y = 20|
-				System.out.println(t2.x+"..."+t2.y);																  	  ---------
+													 --------------
+			static int x =10;							----->  | x =10, 888  |<-----------------------------
+			int y =20;								|	---------------		   		    |
+												|						    |
+			public static void main(String args[]){					|						    |	
+												|						    |
+				Test t1 = new Test();						|-------|					    |	
+				t1.x=888;							      --------------				    |
+				t1.y=999;						       t1---->| y = 20, 999|				  ---------
+				Test t2 = new Test();						      --------------			    t2--> | y = 20|
+				System.out.println(t2.x+"..."+t2.y);									  	  ---------
 			}
 		} // 888 20 
 		
@@ -53,9 +53,9 @@
 				}
 			}
 	
-		-> Considard the following declarations ? 
+	-> Considard the following declarations ? 
 				
-		I. int x =10;
+	   I. int x =10;
 		
 	   II. static int x = 10;
 	   
@@ -69,15 +69,15 @@
 			System.out.println(x);
 			}
 	  
-		- Within the same class which of the above declarations we can take  simultaneously.
+	- Within the same class which of the above declarations we can take  simultaneously.
 	  
 	  
-			A. I and III //valid 
+	    A. I and III //valid 
             B. I and IV  //invalid CE: non-static variables x cannot be referenced from a static context 
             C. II and III //valid 
             D. II and IV //valid 
-			E. I and II // invalid CE: variable x is already defined in Test 
-			F. III and IV // invalid CE: m1() is already defined in Test.
+	    E. I and II // invalid CE: variable x is already defined in Test 
+	    F. III and IV // invalid CE: m1() is already defined in Test.
 			
  Case 1: Overloading concept applicable for static methods including main() methd. But JVM can always call String [] aray argument main() method only.
  
@@ -86,12 +86,12 @@
 			class Test{ 
 			
 				public static void main(String args[]){<-----------
-																  |
-					System.out.println("String[]");				  |	
-				}												  |//==> Overloaded method 
-				public static void main(int [] args){			  |	
-																  |
-					System.out.println("int[]");				  |
+										   |
+					System.out.println("String[]");		   |	
+				}						   |//==> Overloaded method 
+				public static void main(int [] args){		   |	
+										   |
+					System.out.println("int[]");		   |
 				}<-------------------------------------------------
 			} //Stirng[] 
 			
@@ -106,37 +106,37 @@
 		 Ex. 
  																									
                                                                                                                 
-			class P {<----------------------------------------												    				javac p.java 
-															 |                                                  					|
-				public static void main(String args[]) {     |                                                  		 ----------------------
-					                                         |                                                  		 |					  |	
-					System.out.println("Parent main");       |                                                  	 p.class 				c.class
-				}                                            |//====> Save as p.java                            		
-			}                                                |                                                  		
-			Class  C extends P{								 |			                                        java P 						java c 
-															 |                                                  
-			}<------------------------------------------------                                                  o/p: parent main 			parent main 
+			class P {<------------------------------------------									javac p.java 
+									   |                                                  		    	    |
+				public static void main(String args[]) {   |                                                  		 ----------------------
+					                                   |                                                  		 |	  	      |	
+					System.out.println("Parent main"); |                                                  	 p.class 		   c.class
+				}                                          |//====> Save as p.java                            		
+			}                                                  |                                                  		
+			Class  C extends P{				   |			                              java P 				java c 
+									   |                                                  
+			}<-------------------------------------------------                                                  o/p: parent main 			parent main 
 			
 			
  Case 3: It's seems overriding concept applicable for static method but it is not overriding and it is method hidding.
 
 		Ex. 																										    
                                                                                                                     				javac p.java 
-		class P {<----------------------------------------                                                          					|
-														 |	                                                        		 ----------------------
-			public static void main(String args[]) {     |	                                                        		 |					  |	
-				                                         |		                                                    	 p.class 				c.class
-				System.out.println("Parent main");       |	                                                        		
+		class P {<-------------------------------------------                                                          			      |
+								     |	                                                        	     ----------------------
+			public static void main(String args[]) {     |	                                                        	     |   		  |	
+				                                     |		                                                    	 p.class 		c.class
+				System.out.println("Parent main");   |	                                                        		
 			}                                            |	                                                        		
-		}                                                |	// ==> It is method hidding but not overriding.         java P 						java c 
-		Class  C extends P{								 |	                                                        
-                                                         |                                                          o/p: parent main 			child main
+		}                                                    |// ==> It is method hidding but not overriding.                    java P 		java c 
+		Class  C extends P{			 	     |	                                                        
+                                                                     |                                                                  o/p: parent main 	child main
 			public static void main(String args[]) {     |
-				                                         |
-				System.out.println("Parent main");       |
-														 |	
-			}										 	 |	
-		}<------------------------------------------------	
+				                                     |
+				System.out.println("Parent main");   |
+								     |	
+			}					     |	
+		}<----------------------------------------------------	
 
  Note: 
 
