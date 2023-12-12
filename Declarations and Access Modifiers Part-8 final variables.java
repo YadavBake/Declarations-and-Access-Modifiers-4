@@ -1,12 +1,12 @@
 
-															Declarations and Access Modifiers Part-8|| final variables
-														=================================================================
+												Declarations and Access Modifiers Part-8|| final variables
+											   =================================================================
 
  ---------------------
 	final variables 
  ---------------------
 
-	final Instance variable 
+    final Instance variable 
    -------------------------
 	
 		-> If the value of a variable is different from object to object such type of variables are called instance variables.
@@ -49,13 +49,12 @@
 		                                                            
 			class Test {                class Test {                class Test {
 				                        	                        	
-				final int x =10;        	final int x ;           	final int x ;
-			}                           	{                       	Test() {
-			                            		x =10;              		
-		                                	}                       		x =10;
-										}                           	}
-                                                                    }
-																	
+			final int x =10;        	final int x ;           final int x ;
+			}                           	{                      	Test() {
+			                            	    x =10;              		
+		                                	}                     		x =10;
+											}    
+				   		}				}														
 		- These are the only possible place to perform initialization For final instance variables If we are trying to perform initialization any where Else then we will get 
 		  compile time error.
 		
@@ -83,15 +82,15 @@
 		 and shared by every object of that class.
 		 
 	  	 
-																															----------------	
-																															| Cname:DS     |
-																															----------------
-		class {																											|-----|		|	  |--------|
-										-------------   -------------  -------------							-------------   -------------  -------------
+																	    ----------------	
+																	   | Cname:DS     |
+																	   ----------------
+		class {														|------------|	|	  |--------|
+						     -------------   -------------  -------------			    -------------   -------------  -------------
 			String name ;               |name:durga;|   |name:shiva;|  |name:Ravi; |                            |name:durga;|   |name:shiva;|  |name:Ravi; |
 			int rollno;                 |rollno:101;|   |rollno:101;|  |rollno:101;|                            |rollno:101;|   |rollno:101;|  |rollno:101;|
-			String Cname;               |Cname:DS   |   |Cname:DS   |  |Cname:DS   |							-------------   -------------  -------------
-										-------------   -------------  -------------                            	s1          	s2         	s600
+			String Cname;               |Cname:DS   |   |Cname:DS   |  |Cname:DS   |			    -------------   -------------  -------------
+						    -------------   -------------  -------------                            	s1          	s2         	s600
 		}                               	s1          	s2         	s600                                    
 		
 		
@@ -174,12 +173,12 @@
 	
 		Ex. 
 	
-		class Test {											class Test {
+		class Test {						class Test {
 			                                                    	
-				public static void main(String args[]) {        	public static void main(String args[]){
-					                                            		
-					int x ;                                     		int x ;
-					System.out.println("Hello");                		System.out.println(x);
+		public static void main(String args[]) {        	public static void main(String args[]){
+				                                            		
+		int x ;                                     		int x ;
+		System.out.println("Hello");                		System.out.println(x);
 				}                                               	}
 		} //Hello                                               }//CE: variable x might not have been initialized.
 		
